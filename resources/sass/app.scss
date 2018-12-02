@@ -8,7 +8,28 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
-.navbar-laravel {
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background: #35322e;
+    // color: #FFF;
+}
+
+.v-select {
+    background: #FFF;
+    border-radius: 5px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+.container h4, .container label {
+    color: #FFF
+}
+button {
+    align-self: flex-end;
 }

@@ -5,19 +5,20 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
+import App from './App.vue';
+import store from './store'
+
 require('./bootstrap');
 
 window.Vue = require('vue');
 
-/**
- * The following block of code may be used to automatically register your
- * Vue components. It will recursively scan this directory for the Vue
- * components and automatically register them with their "basename".
- *
- * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
- */
+import VueRouter from 'vue-router'
+Vue.use(VueRouter)
 
-Vue.component('example-component', require('./components/ExampleComponent.vue'));
+import router from './router'
+
+import VueSelect from 'vue-select'
+Vue.component('v-select', VueSelect);
 
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key)))
@@ -29,5 +30,8 @@ Vue.component('example-component', require('./components/ExampleComponent.vue'))
  */
 
 const app = new Vue({
-    el: '#app'
+    el: '#app',
+    render: h => h(App),
+    router,
+    store,
 });

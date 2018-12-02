@@ -2,6 +2,11 @@
 
 use Illuminate\Http\Request;
 
+Route::apiResources([
+    'products' => 'ProductController',
+    'comparate' => 'ComparateController'
+]);
+
 Route::namespace('AuthAPI')->prefix('auth')->group(function() {
     Route::post('login', 'AuthController@login');
     Route::post('register', 'AuthController@register');
