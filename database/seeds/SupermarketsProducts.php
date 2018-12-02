@@ -13,8 +13,8 @@ class SupermarketsProducts extends Seeder
      */
     public function run()
     {
-        Supermarket::select('*')->delete();
-        Product::select('*')->delete();
+        // Supermarket::select('*')->delete();
+        // Product::select('*')->delete();
 
         $supermarkets = [
             [
