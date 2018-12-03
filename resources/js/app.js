@@ -20,6 +20,10 @@ import router from './router'
 import VueSelect from 'vue-select'
 Vue.component('v-select', VueSelect);
 
+require('./plugins/transitions')
+
+import {TweenMax, Power2, TimelineLite} from "gsap/TweenMax";
+window.TweenMax = TweenMax
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key)))
 

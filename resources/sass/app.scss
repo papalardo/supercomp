@@ -8,14 +8,15 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
+body {
+    background: #35322e;
+}
 .main {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100vw;
     height: 100vh;
-    background: #35322e;
-    // color: #FFF;
 }
 
 .v-select {

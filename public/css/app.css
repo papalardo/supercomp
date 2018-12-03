@@ -10466,6 +10466,10 @@ a.text-dark:focus {
   }
 }
 
+body {
+  background: #35322e;
+}
+
 .main {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -10478,7 +10482,6 @@ a.text-dark:focus {
           align-items: center;
   width: 100vw;
   height: 100vh;
-  background: #35322e;
 }
 
 .v-select {
