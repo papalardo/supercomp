@@ -17,6 +17,10 @@ const routes = [
         path: '/comparatives',
         component: load('comparatives')
     },
+    {
+        path: '/checklist',
+        component: load('checklist')
+    },
     // {
     //     path: '/login',
     //     meta: {

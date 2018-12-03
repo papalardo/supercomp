@@ -1,8 +1,8 @@
 <template lang="html">
   <div class="main">
-        <router-view-transition>
+        <!-- <router-view-transition> -->
             <router-view key="dasdas"/>
-        </router-view-transition>
+        <!-- </router-view-transition> -->
   </div>
 </template>
 

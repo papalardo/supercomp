@@ -13,8 +13,8 @@ class SupermarketsProducts extends Seeder
      */
     public function run()
     {
-        // Supermarket::select('*')->delete();
-        // Product::select('*')->delete();
+        Supermarket::select('*')->delete();
+        Product::select('*')->delete();
 
         $supermarkets = [
             [
@@ -46,8 +46,12 @@ class SupermarketsProducts extends Seeder
 
             $supermarket = Supermarket::create($value);
             $supermarket->products()->createMany($products);
+
+            $products = collect($supermarket->products->pluck('id'))->random(4);
+
+            $supermarket->products()->whereIn('id', $products)->delete();
+
         }
 
-        // mt_rand( 0, 100 ) / 10;
     }
 }

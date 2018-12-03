@@ -1,6 +1,9 @@
 
 const state = {
-    single: {}
+    single: {
+        name: '',
+        checklist: []
+    }
 }
 
 // getters
@@ -15,13 +18,19 @@ const actions = {
     async update({ commit }, data) {
         commit('SET_SINGLE', data)
     },
+    async setChecklist({ commit }, data) {
+        commit('SET_CHECKLIST', data)
+    },
 }
 
 // mutations
 const mutations = {
     SET_SINGLE (state, data) {
-        state.single = data
+        state.single.name = data
     },
+    SET_CHECKLIST(state, data) {
+        state.single.checklist = data
+    }
 }
 
 export default {
