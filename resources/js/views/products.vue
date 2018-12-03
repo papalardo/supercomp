@@ -23,6 +23,10 @@ export default {
             'comparatives': 'comparatives/all'
         })
     },
+    mounted() {
+        if(this.$store.state.user.single.checklist.length) 
+            this.productsSelected = _.toArray(_.assign({}, this.$store.state.user.single.checklist))
+    },
     methods: {
         ...mapActions({
             'makeComparative': 'comparatives/search',
